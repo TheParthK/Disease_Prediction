@@ -5,7 +5,7 @@ import pandas as pd
 import numpy as np
 from sklearn.preprocessing import LabelEncoder
 encoder = LabelEncoder()
-data = pd.read_csv('Dataset/Training.csv').dropna(axis = 1)
+data = pd.read_csv('Training.csv').dropna(axis = 1)
 data["prognosis"] = encoder.fit_transform(data["prognosis"])
 
 tuple_symptoms = (i for i in data.head())
